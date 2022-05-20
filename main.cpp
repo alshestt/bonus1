@@ -12,7 +12,7 @@ bool TestAll(){
     return RUN_ALL_TESTS();
 }
 int main(int argc, char **argv) {
-    //Вместо true я хочу поставить TestAll, но он отправить кучу ненужного текста в stdout
+    //Вместо true я хочу поставить TestAll, но он отправит кучу ненужного текста в stdout
     if (true){
         size_t strings_n;
         std::string tmp, result;
