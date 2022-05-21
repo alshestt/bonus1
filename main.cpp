@@ -12,7 +12,7 @@ int main() {
     std::vector<std::vector<std::string>> strings_split;
     std::cin >> strings_n;
     for (size_t i = 0; i < strings_n; ++i){
-        std::cin >> tmp;
+        std::cin >>  tmp;
         if (!tmp.empty()){
             if (!check_string(tmp,root)) {
                 strings_vector.push_back(tmp);
