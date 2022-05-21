@@ -5,18 +5,24 @@
 #include "Superstring.h"
 #include <iterator>
 #include <algorithm>
-size_t overlap(const std::string& s_1, const std::string& s_2){
-    size_t s1_last = s_1.size() - 1;
-    size_t s2_len = s_2.size();
-    size_t overlap = 0;
-    for (size_t i = s1_last, j = 1; i > 0 && j < s2_len; i--, j++){
-        std::string suff, preff;
-        copy(s_1.begin()+i, s_1.end(), back_inserter(suff));
-        copy(s_2.begin(), s_2.begin()+j, back_inserter(preff));
-        if (suff == preff)
-            overlap = j;
+
+std::vector<size_t> prefix_function(const std::string& pattern){
+    size_t size = pattern.size();
+    std::vector<size_t> pi (size, 0);
+    for (size_t i=1; i< size; ++i) {
+        int j = pi[i-1];
+        while (j > 0 && pattern[i] != pattern[j])
+            j = pi[j-1];
+        if (pattern[i] == pattern[j])  ++j;
+        pi[i] = j;
     }
-    return overlap;
+    return pi;
+
+}
+size_t overlap(const std::string& s_1, const std::string& s_2){
+    std::string s2_concat_s1 = s_2 + s_1;
+    std::vector<size_t> pi = prefix_function(s2_concat_s1);
+    return pi[pi.size()-1];
 }
 
 std::string prefix(const std::string& s_1,const size_t& ov){

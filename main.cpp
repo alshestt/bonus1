@@ -13,7 +13,8 @@ bool TestAll(){
 }
 int main(int argc, char **argv) {
     //Вместо true я хочу поставить TestAll, но он отправит кучу ненужного текста в stdout
-    if (true){
+    TestAll();
+    /*if (true){
         size_t strings_n;
         std::string tmp, result;
         std::vector<std::string> strings_vector;
@@ -51,5 +52,5 @@ int main(int argc, char **argv) {
         result = cycles_string(strings_split);
         std::cout << std::endl << "The 4-answer is " << result << std::endl;
     }
-    return 0;
+    return 0;*/
 }
