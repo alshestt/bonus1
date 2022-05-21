@@ -7,6 +7,10 @@
 #include <vector>
 // Префикс-функция строки
 std::vector<size_t> prefix_function(const std::string& pattern);
+
+//Проверка наличия подстроки в строке, Кнут-Моррис-Пратт
+bool check_substring(const std::string& text, const std::string& pattern);
+
 // Overlap двух строк
 size_t overlap(const std::string& string_1, const std::string& string_2);
 

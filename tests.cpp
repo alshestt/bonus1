@@ -47,7 +47,16 @@ TEST(graph, cycle_cover){
         std::vector<size_t>({0,2,1}),std::vector<size_t>({3,4}),std::vector<size_t>({5})
     }));
 }
-
+TEST(strings, prefix_function){
+    std::string ex1 = "abcabcd", ex2 = "aabaaab";
+    ASSERT_EQ(prefix_function(ex1), std::vector<size_t>({0,0,0,1,2,3,0}));
+    ASSERT_EQ(prefix_function(ex2), std::vector<size_t>({0,1,0,1,2,2,3}));
+}
+TEST(strings, KMP){
+    std::string t1 = "abcdabcfer", p1 = "cf", t2 = "acm_mipt_2022", p2 = "time";
+    ASSERT_TRUE(check_substring(t1,p1));
+    ASSERT_FALSE(check_substring(t2,p2));
+}
 TEST(strings, overlap){
     std::string s_0 = "cde", s_1 = "abc", s_2 = "eab";
     ASSERT_EQ(overlap(s_0,s_1), 0);

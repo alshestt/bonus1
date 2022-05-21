@@ -19,6 +19,17 @@ std::vector<size_t> prefix_function(const std::string& pattern){
     return pi;
 
 }
+bool check_substring(const std::string& text, const std::string& pattern){
+    std::string pattern_concat_text = pattern + '#' + text;
+    std::vector<size_t> pi = prefix_function(pattern_concat_text);
+    size_t p_size = pattern.size(), sum_size = pattern_concat_text.size();
+    for(size_t i = p_size + 1; i < sum_size; ++i){
+        if (pi[i] == p_size)
+            return true;
+    }
+    return false;
+}
+
 size_t overlap(const std::string& s_1, const std::string& s_2){
     std::string s2_concat_s1 = s_2 + s_1;
     std::vector<size_t> pi = prefix_function(s2_concat_s1);
