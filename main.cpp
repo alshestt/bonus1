@@ -1,14 +1,10 @@
-#pragma once
 #include <iostream>
-#include "gtest/gtest.h"
-#include <cstdint>
-#include <vector>
 #include "Graph.h"
 #include "Superstring.h"
 
 int main() {
     size_t strings_n;
-    vertex root;
+    std::shared_ptr<vertex> root = std::make_shared<vertex>();
     std::string tmp, result;
     std::vector<std::string> strings_vector;
     std::vector<size_t> assignment;
@@ -18,7 +14,7 @@ int main() {
     for (size_t i = 0; i < strings_n; ++i){
         std::cin >> tmp;
         if (!tmp.empty()){
-            if (!check_string(tmp,&root)) {
+            if (!check_string(tmp,root)) {
                 strings_vector.push_back(tmp);
             }
         }

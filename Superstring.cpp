@@ -5,14 +5,15 @@
 #include "Superstring.h"
 #include <iterator>
 #include <algorithm>
-
-bool check_string(const std::string& pattern, vertex* root){
+#include <memory>
+bool check_string(const std::string& pattern, std::shared_ptr<vertex> root){
     bool flag = true;
-    vertex* current_vertex = root;
+    std::shared_ptr<vertex> current_vertex = root;
     for (char c : pattern){
         c -= 'a';
         if (!current_vertex->next_vertex[c]) {
-            current_vertex->next_vertex[c] = new vertex;
+            std::shared_ptr<vertex> created_vertex = std::make_shared<vertex>();
+            current_vertex->next_vertex[c] = created_vertex;
             flag = false;
         }
         current_vertex = current_vertex->next_vertex[c];

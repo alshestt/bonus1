@@ -1,7 +1,6 @@
 //
 // Created by Александр on 19.05.2022.
 //
-#pragma once
 #include "Graph.h"
 #include "Superstring.h"
 #include "gtest/gtest.h"
@@ -54,11 +53,11 @@ TEST(strings, prefix_function){
 }
 TEST(strings, Aho_Corasick){
     std::string ex1 = "abcdefgh", ex2 = "abcd", ex3 = "bcd", ex4 = "bc";
-    vertex root;
-    ASSERT_FALSE(check_string(ex1, &root));
-    ASSERT_TRUE(check_string(ex2, &root));
-    ASSERT_FALSE(check_string(ex3,&root));
-    ASSERT_TRUE(check_string(ex4,&root));
+    std::shared_ptr<vertex> root = std::make_shared<vertex>();
+    ASSERT_FALSE(check_string(ex1, root));
+    ASSERT_TRUE(check_string(ex2, root));
+    ASSERT_FALSE(check_string(ex3,root));
+    ASSERT_TRUE(check_string(ex4,root));
 }
 TEST(strings, overlap){
     std::string s_0 = "cde", s_1 = "abc", s_2 = "eab";

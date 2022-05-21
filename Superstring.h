@@ -5,16 +5,16 @@
 #include <cstdint>
 #include <string>
 #include <vector>
-
+#include <memory>
 //Инициализация вершины бор
 const size_t alphabet_size = 26;
 typedef struct vertex{
-    vertex* next_vertex[alphabet_size] = {nullptr};
+    std::shared_ptr<vertex> next_vertex[alphabet_size] = {nullptr};
     bool is_terminal = false;
 } vertex;
 
 //Проверка и добавление строки в бор
-bool check_string(const std::string& pattern, vertex* root);
+bool check_string(const std::string& pattern, std::shared_ptr<vertex> root);
 
 
 // Префикс-функция строки
