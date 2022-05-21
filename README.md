@@ -1,3 +1,3 @@
-# bonus_project
+# bonus1
 
 Greed Common Superstring
