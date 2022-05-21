@@ -52,10 +52,13 @@ TEST(strings, prefix_function){
     ASSERT_EQ(prefix_function(ex1), std::vector<size_t>({0,0,0,1,2,3,0}));
     ASSERT_EQ(prefix_function(ex2), std::vector<size_t>({0,1,0,1,2,2,3}));
 }
-TEST(strings, KMP){
-    std::string t1 = "abcdabcfer", p1 = "cf", t2 = "acm_mipt_2022", p2 = "time";
-    ASSERT_TRUE(check_substring(t1,p1));
-    ASSERT_FALSE(check_substring(t2,p2));
+TEST(strings, Aho_Corasick){
+    std::string ex1 = "abcdefgh", ex2 = "abcd", ex3 = "bcd", ex4 = "bc";
+    vertex root;
+    ASSERT_FALSE(check_string(ex1, &root));
+    ASSERT_TRUE(check_string(ex2, &root));
+    ASSERT_FALSE(check_string(ex3,&root));
+    ASSERT_TRUE(check_string(ex4,&root));
 }
 TEST(strings, overlap){
     std::string s_0 = "cde", s_1 = "abc", s_2 = "eab";

@@ -8,6 +8,7 @@
 
 int main() {
     size_t strings_n;
+    vertex root;
     std::string tmp, result;
     std::vector<std::string> strings_vector;
     std::vector<size_t> assignment;
@@ -17,15 +18,9 @@ int main() {
     for (size_t i = 0; i < strings_n; ++i){
         std::cin >> tmp;
         if (!tmp.empty()){
-            bool is_substring = false;
-            for(const auto & j : strings_vector){
-                if (check_substring(j, tmp)) {
-                    is_substring = true;
-                    break;
-                }
-            }
-            if (!is_substring)
+            if (!check_string(tmp,&root)) {
                 strings_vector.push_back(tmp);
+            }
         }
     }
     strings_n = strings_vector.size();

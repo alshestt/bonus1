@@ -5,11 +5,20 @@
 #include <cstdint>
 #include <string>
 #include <vector>
+
+//Инициализация вершины бор
+const size_t alphabet_size = 26;
+typedef struct vertex{
+    vertex* next_vertex[alphabet_size] = {nullptr};
+    bool is_terminal = false;
+} vertex;
+
+//Проверка и добавление строки в бор
+bool check_string(const std::string& pattern, vertex* root);
+
+
 // Префикс-функция строки
 std::vector<size_t> prefix_function(const std::string& pattern);
-
-//Проверка наличия подстроки в строке, Кнут-Моррис-Пратт
-bool check_substring(const std::string& text, const std::string& pattern);
 
 // Overlap двух строк
 size_t overlap(const std::string& string_1, const std::string& string_2);

@@ -6,6 +6,21 @@
 #include <iterator>
 #include <algorithm>
 
+bool check_string(const std::string& pattern, vertex* root){
+    bool flag = true;
+    vertex* current_vertex = root;
+    for (char c : pattern){
+        c -= 'a';
+        if (!current_vertex->next_vertex[c]) {
+            current_vertex->next_vertex[c] = new vertex;
+            flag = false;
+        }
+        current_vertex = current_vertex->next_vertex[c];
+    }
+    current_vertex->is_terminal = true;
+    return flag;
+}
+
 std::vector<size_t> prefix_function(const std::string& pattern){
     size_t size = pattern.size();
     std::vector<size_t> pi (size, 0);
@@ -18,16 +33,6 @@ std::vector<size_t> prefix_function(const std::string& pattern){
     }
     return pi;
 
-}
-bool check_substring(const std::string& text, const std::string& pattern){
-    std::string pattern_concat_text = pattern + '#' + text;
-    std::vector<size_t> pi = prefix_function(pattern_concat_text);
-    size_t p_size = pattern.size(), sum_size = pattern_concat_text.size();
-    for(size_t i = p_size + 1; i < sum_size; ++i){
-        if (pi[i] == p_size)
-            return true;
-    }
-    return false;
 }
 
 size_t overlap(const std::string& s_1, const std::string& s_2){
