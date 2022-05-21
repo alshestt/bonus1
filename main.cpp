@@ -14,7 +14,7 @@ bool TestAll(){
 int main(int argc, char **argv) {
     //Вместо true я хочу поставить TestAll, но он отправит кучу ненужного текста в stdout
     //TestAll();
-
+    //
     size_t strings_n;
     std::string tmp, result;
     std::vector<std::string> strings_vector;
