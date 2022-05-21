@@ -7,7 +7,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/mnt/c/Users/Александр/CLionProjects/bonus1/Graph.cpp" "/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug/CMakeFiles/bonus1.dir/Graph.cpp.o"
   "/mnt/c/Users/Александр/CLionProjects/bonus1/Superstring.cpp" "/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug/CMakeFiles/bonus1.dir/Superstring.cpp.o"
   "/mnt/c/Users/Александр/CLionProjects/bonus1/main.cpp" "/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug/CMakeFiles/bonus1.dir/main.cpp.o"
-  "/mnt/c/Users/Александр/CLionProjects/bonus1/tests.cpp" "/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug/CMakeFiles/bonus1.dir/tests.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

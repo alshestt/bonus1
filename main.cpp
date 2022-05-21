@@ -6,15 +6,7 @@
 #include "Graph.h"
 #include "Superstring.h"
 
-
-bool TestAll(){
-    ::testing::InitGoogleTest();
-    return RUN_ALL_TESTS();
-}
-int main(int argc, char **argv) {
-    //Вместо true я хочу поставить TestAll, но он отправит кучу ненужного текста в stdout
-    //TestAll();
-    //
+int main() {
     size_t strings_n;
     std::string tmp, result;
     std::vector<std::string> strings_vector;

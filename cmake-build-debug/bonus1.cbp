@@ -57,6 +57,54 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="tests">
+				<Option output="/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug/tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/Александр/CLionProjects/bonus1/googletest/googletest/include"/>
+					<Add directory="/mnt/c/Users/Александр/CLionProjects/bonus1/googletest/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug/Makefile&quot;  VERBOSE=1 tests"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tests/fast">
+				<Option output="/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug/tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/Александр/CLionProjects/bonus1/googletest/googletest/include"/>
+					<Add directory="/mnt/c/Users/Александр/CLionProjects/bonus1/googletest/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug/Makefile&quot;  VERBOSE=1 tests/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="install">
 				<Option working_dir="/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug"/>
 				<Option type="4"/>
@@ -337,15 +385,19 @@
 			</Target>
 		</Build>
 		<Unit filename="/mnt/c/Users/Александр/CLionProjects/bonus1/Graph.cpp">
+			<Option target="tests"/>
 			<Option target="bonus1"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Александр/CLionProjects/bonus1/Graph.h">
+			<Option target="tests"/>
 			<Option target="bonus1"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Александр/CLionProjects/bonus1/Superstring.cpp">
+			<Option target="tests"/>
 			<Option target="bonus1"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Александр/CLionProjects/bonus1/Superstring.h">
+			<Option target="tests"/>
 			<Option target="bonus1"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Александр/CLionProjects/bonus1/googletest/googlemock/src/gmock-all.cc">
@@ -364,7 +416,7 @@
 			<Option target="bonus1"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Александр/CLionProjects/bonus1/tests.cpp">
-			<Option target="bonus1"/>
+			<Option target="tests"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Александр/CLionProjects/bonus1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

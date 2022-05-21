@@ -168,6 +168,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
+#=============================================================================
 # Target rules for targets named bonus1
 
 # Build rule for target.
@@ -238,6 +251,7 @@ Graph.o: Graph.cpp.o
 
 # target to build an object file
 Graph.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/Graph.cpp.o
 	$(MAKE) -f CMakeFiles/bonus1.dir/build.make CMakeFiles/bonus1.dir/Graph.cpp.o
 .PHONY : Graph.cpp.o
 
@@ -247,6 +261,7 @@ Graph.i: Graph.cpp.i
 
 # target to preprocess a source file
 Graph.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/Graph.cpp.i
 	$(MAKE) -f CMakeFiles/bonus1.dir/build.make CMakeFiles/bonus1.dir/Graph.cpp.i
 .PHONY : Graph.cpp.i
 
@@ -256,6 +271,7 @@ Graph.s: Graph.cpp.s
 
 # target to generate assembly for a file
 Graph.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/Graph.cpp.s
 	$(MAKE) -f CMakeFiles/bonus1.dir/build.make CMakeFiles/bonus1.dir/Graph.cpp.s
 .PHONY : Graph.cpp.s
 
@@ -265,6 +281,7 @@ Superstring.o: Superstring.cpp.o
 
 # target to build an object file
 Superstring.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/Superstring.cpp.o
 	$(MAKE) -f CMakeFiles/bonus1.dir/build.make CMakeFiles/bonus1.dir/Superstring.cpp.o
 .PHONY : Superstring.cpp.o
 
@@ -274,6 +291,7 @@ Superstring.i: Superstring.cpp.i
 
 # target to preprocess a source file
 Superstring.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/Superstring.cpp.i
 	$(MAKE) -f CMakeFiles/bonus1.dir/build.make CMakeFiles/bonus1.dir/Superstring.cpp.i
 .PHONY : Superstring.cpp.i
 
@@ -283,6 +301,7 @@ Superstring.s: Superstring.cpp.s
 
 # target to generate assembly for a file
 Superstring.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/Superstring.cpp.s
 	$(MAKE) -f CMakeFiles/bonus1.dir/build.make CMakeFiles/bonus1.dir/Superstring.cpp.s
 .PHONY : Superstring.cpp.s
 
@@ -319,7 +338,7 @@ tests.o: tests.cpp.o
 
 # target to build an object file
 tests.cpp.o:
-	$(MAKE) -f CMakeFiles/bonus1.dir/build.make CMakeFiles/bonus1.dir/tests.cpp.o
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests.cpp.o
 .PHONY : tests.cpp.o
 
 tests.i: tests.cpp.i
@@ -328,7 +347,7 @@ tests.i: tests.cpp.i
 
 # target to preprocess a source file
 tests.cpp.i:
-	$(MAKE) -f CMakeFiles/bonus1.dir/build.make CMakeFiles/bonus1.dir/tests.cpp.i
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests.cpp.i
 .PHONY : tests.cpp.i
 
 tests.s: tests.cpp.s
@@ -337,7 +356,7 @@ tests.s: tests.cpp.s
 
 # target to generate assembly for a file
 tests.cpp.s:
-	$(MAKE) -f CMakeFiles/bonus1.dir/build.make CMakeFiles/bonus1.dir/tests.cpp.s
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests.cpp.s
 .PHONY : tests.cpp.s
 
 # Help Target
@@ -350,6 +369,7 @@ help:
 	@echo "... install/local"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... tests"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
