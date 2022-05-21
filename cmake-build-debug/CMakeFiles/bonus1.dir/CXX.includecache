@@ -6,33 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/Александр/CLionProjects/bonus1/Graph.h
-vector
--
-cstdint
--
-Superstring.h
-/mnt/c/Users/Александр/CLionProjects/bonus1/Superstring.h
-
-/mnt/c/Users/Александр/CLionProjects/bonus1/Superstring.h
-cstdint
--
-string
--
-vector
--
-
-/mnt/c/Users/Александр/CLionProjects/bonus1/main.cpp
-iostream
--
-gtest/gtest.h
-/mnt/c/Users/Александр/CLionProjects/bonus1/gtest/gtest.h
-cstdint
--
-vector
--
-Graph.h
-/mnt/c/Users/Александр/CLionProjects/bonus1/Graph.h
-Superstring.h
-/mnt/c/Users/Александр/CLionProjects/bonus1/Superstring.h
-

@@ -124,6 +124,9 @@ bonus1: CMakeFiles/bonus1.dir/tests.cpp.o
 bonus1: CMakeFiles/bonus1.dir/Graph.cpp.o
 bonus1: CMakeFiles/bonus1.dir/Superstring.cpp.o
 bonus1: CMakeFiles/bonus1.dir/build.make
+bonus1: lib/libgtest.a
+bonus1: lib/libgtest_main.a
+bonus1: lib/libgtest.a
 bonus1: CMakeFiles/bonus1.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Александр/CLionProjects/bonus1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable bonus1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bonus1.dir/link.txt --verbose=$(VERBOSE)

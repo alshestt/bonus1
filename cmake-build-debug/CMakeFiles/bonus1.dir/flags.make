@@ -6,5 +6,5 @@ CXX_FLAGS = -Ofast -Wall -Wextra         -Wpedantic -fomit-frame-pointer -fsanit
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -isystem /mnt/c/Users/Александр/CLionProjects/bonus1/googletest/googletest/include -isystem /mnt/c/Users/Александр/CLionProjects/bonus1/googletest/googletest 
 
